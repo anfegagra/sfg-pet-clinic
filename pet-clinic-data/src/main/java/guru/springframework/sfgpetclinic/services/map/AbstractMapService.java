@@ -40,7 +40,7 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
 		map.remove(id);
 	}
 
-	Long getNextId() {
+	private Long getNextId() {
 		Long nextId = null;
 		try {
 			nextId = Collections.max(map.keySet()) + 1;
